@@ -5,23 +5,25 @@
 # Description: Checks Disk, Memory, and CPU usage
 # ==========================================================
 
-echo "--- SYSTEM HEALTH REPORT ---"
-date
-echo ""
+#!/bin/bash
 
-# 1. Check Disk Usage (Focus on the main partition)
-echo "Checking Disk Usage..."
-df -h | grep '^/dev/'
+# Define the log file path
+LOG_FILE="logs/health_report.log"
 
-# 2. Check Free Memory
-echo ""
-echo "Checking Memory..."
-free -h
+echo "--- SYSTEM HEALTH REPORT ---" | tee $LOG_FILE
+date | tee -a $LOG_FILE
+echo "" | tee -a $LOG_FILE
 
-# 3. Check CPU Load
-echo ""
-echo "Checking CPU Load..."
-uptime
+echo "Checking Disk Usage..." | tee -a $LOG_FILE
+df -h | grep '^/dev/' | tee -a $LOG_FILE
+
+echo "" | tee -a $LOG_FILE
+echo "Checking Memory..." | tee -a $LOG_FILE
+free -h | tee -a $LOG_FILE
+
+echo "" | tee -a $LOG_FILE
+echo "Checking CPU Load..." | tee -a $LOG_FILE
+uptime | tee -a $LOG_FILE
 
 echo ""
-echo "--- END OF REPORT ---"
+echo "Report saved to $LOG_FILE"
