@@ -21,7 +21,7 @@ I am an IT professional with 7 years of experience (Support, Databases, and Clou
 - `/scripts`: Automation scripts for Linux and AWS setup.
 - `/logs`: Output files and execution history from automation scripts.
 - `/docker`: Dockerfiles and container orchestration labs.
-- `/terraform`: Infrastructure as Code blueprints (Coming soon).
+- `/terraform`: Infrastructure as Code blueprints.
 - `/kubernetes`: Cluster management and deployments (Coming soon).
 
 ---
