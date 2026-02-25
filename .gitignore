@@ -1,0 +1,6 @@
+logs/*.log
+docker/proxy/.htpasswd
+.DS_Store
+.env
+*.tfstate
+*.tfstate.*
